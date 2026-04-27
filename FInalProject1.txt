@@ -1,0 +1,29 @@
+from flask import Flask, render_template 
+
+app = Flask(__name__)
+
+
+class Appointment:
+    def __int__(self, client_name, service, time):
+        self.client_name = client_name 
+        self.service = service
+        self.time = time
+
+appointments_list = [
+    Appointment("Alice", "Concultation", "10:00 AM"),
+    Appointment("Richard", "Follow-up", "3:00 PM")
+]
+
+@app.route('/')
+def index():
+
+    return render_template('index.html', appointments=appointments_list)
+
+    @app.route('/appointment/<int:id>')
+    def view_item(id):
+
+        item = appointments_list[id]
+        return render_templates('detial.html', item=item)
+
+        if __name__ = '__main__':
+            app.run(debug=True)
