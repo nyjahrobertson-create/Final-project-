@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://jsdelivr.net" rel="stylesheet">
+        <title>Appointment Detail</title>
+    </head>
+    <body class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h2>{{ item.client_name }}</h2>
+                <p><strong>Service:</strong> {{ item.service }}</p>
+                <p><strong>Time:</strong> {{ item.time }}</p>
+                <a href="/" class="btn-primary">Back to List</a>
+            </div>
+        </div>
+    </body>
+    </html> 

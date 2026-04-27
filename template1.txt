@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link href="https://jsdelivr.net" rel="stylesheet">
+        <title>Appointments</title>
+    </head>
+    <body class="container mt-5"
+    <h1 class="mb-4">Appointment Schedule</h1>
+    <ul class="list-group">
+        {% for appt in appointments %}
+        <li class="list-group-item"?></li>
+        <a href="/appointment/{{ loop.index0}}">{{ appt.client_name }} - {{ appt.time }} </a>
+    </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
